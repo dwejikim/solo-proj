@@ -6,7 +6,7 @@ import WorkoutHistory from "./WorkoutHistory.jsx";
 function MainContainer() {
     return (
         <div>
-            <h2>Workout Log</h2>
+            {/* <h2>Workout Log</h2> */}
             <CreateWorkout />
             {/* <WorkoutHistory /> */}
         </div>

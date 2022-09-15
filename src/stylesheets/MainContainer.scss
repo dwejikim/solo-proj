@@ -56,6 +56,16 @@
     flex-direction: column;
   }
 
+  .background {
+  background-image: url('../assets/exercise.jpg');
+  width: 98vw;
+  height: 150vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  // margin: 0px;
+  // padding: 0px;
+  }
 //   .addWorkout {
 //     display: flex;
 //   }

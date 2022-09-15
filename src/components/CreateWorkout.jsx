@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../stylesheets/MainContainer.scss";
 import { data } from "../data/data.js";
 import axios from 'axios';
@@ -15,6 +15,12 @@ function CreateWorkout () {
     set4: '',
     set5: '',
   })
+
+  useEffect(() => {
+    fetch('http://localhost:3000')
+    .then((response) => response.json())
+    .then(data => setWorkoutLists(data))
+  });
 
   const handleAddWorkoutChange = (event) => {
     event.preventDefault();
@@ -119,34 +125,34 @@ function CreateWorkout () {
               <input 
               type="text" 
               name="set1"
-              required="required"
+              // required="required"
               placeholder="Enter WeightxReps"
               onChange={handleAddWorkoutChange}
               />
               <input 
               type="text" 
               name="set2"
-              required="required"
+              // required="required"
               placeholder="Enter WeightxReps"
               onChange={handleAddWorkoutChange}
               />
               <input 
               type="text" 
               name="set3"
-              required="required"
+              // required="required"
               placeholder="Enter WeightxReps"
               onChange={handleAddWorkoutChange}
               />
               <input 
               type="text" 
               name="set4"
-              required="required"
+              // required="required"
               placeholder="Enter WeightxReps"
               onChange={handleAddWorkoutChange}
               /><input 
               type="text" 
               name="set5"
-              required="required"
+              // required="required"
               placeholder="Enter WeightxReps"
               onChange={handleAddWorkoutChange}
               />

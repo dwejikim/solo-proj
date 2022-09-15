@@ -7,7 +7,7 @@ import WorkoutHistory from "./WorkoutHistory.jsx"
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="background">
         <h1>Workout Log</h1>
         <MainContainer/>
       </div>
