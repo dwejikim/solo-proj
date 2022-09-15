@@ -1,7 +1,6 @@
 export const data = [
   {
-    id: 1,
-    workoutName: "Barbell Back Squats",
+    workoutname: "Barbell Back Squats",
     set1: "250x3",
     set2: "255x3",
     set3: "260x3",
@@ -9,8 +8,7 @@ export const data = [
     set5: "270x3"
   },
   {
-    id: 2,
-    workoutName: "Hack Split Squats",
+    workoutname: "Hack Split Squats",
     set1: "135x3",
     set2: "145x3",
     set3: "155x3",
@@ -18,8 +16,7 @@ export const data = [
     set5: "175x3"
   },
   {
-    id: 3,
-    workoutName: "Deadlifts",
+    workoutname: "Deadlifts",
     set1: "255x3",
     set2: "265x3",
     set3: "275x3",
@@ -27,8 +24,7 @@ export const data = [
     set5: "295x3"
   },
   {
-    id: 4,
-    workoutName: "Calf Raises",
+    workoutname: "Calf Raises",
     set1: "190x20",
     set2: "190x20",
     set3: "195x18",

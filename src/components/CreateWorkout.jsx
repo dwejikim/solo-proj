@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../stylesheets/MainContainer.scss";
 import { data } from "../data/data.js";
-import { nanoid } from 'nanoid';
 import axios from 'axios';
 
 function CreateWorkout () {
@@ -9,7 +8,7 @@ function CreateWorkout () {
   //ADD FUNCTIONS HERE LIKE ONCLICK;
   const [workoutLists, setWorkoutLists] = useState(data);
   const [addWorkoutData, setAddWorkoutData] = useState({
-    workoutName: '',
+    workoutname: '',
     set1: '',
     set2: '',
     set3: '',
@@ -33,8 +32,7 @@ function CreateWorkout () {
     event.preventDefault();
 
     const newWorkout = {
-      id: nanoid(),
-      workoutName: addWorkoutData.workoutName,
+      workoutname: addWorkoutData.workoutname,
       set1: addWorkoutData.set1,
       set2: addWorkoutData.set2,
       set3: addWorkoutData.set3,
@@ -48,14 +46,34 @@ function CreateWorkout () {
     //send newWorkout through post request to backend
     //npm i axios
       //axios.post(http:localhost:3000)
+
+      /*
       axios.post('http://localhost:3000', {
         newWorkouts
       })
       .then((resp)=> {console.log(resp)})
       .catch((error)=> {console.log('error in axios.post')})
+      */
+
       //.then(you are sending newWorkouts as body)
       //.then(data => console.log(data))
       //body jsonstringify 
+      const data = newWorkout 
+      fetch('http://localhost:3000/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then((data) => data.json())
+      // .then(res => res.json())
+      .then((data) => {
+        console.log('Success:', data)
+      })
+      .catch((error) => {
+        console.log('Error:', error)
+      })
   }
 
     return (
@@ -76,7 +94,7 @@ function CreateWorkout () {
               return (
                 <>
                 <tr>
-                <td>{data.workoutName}</td>
+                <td>{data.workoutname}</td>
                 <td>{data.set1}</td>
                 <td>{data.set2}</td>
                 <td>{data.set3}</td>
@@ -93,7 +111,7 @@ function CreateWorkout () {
             <form onSubmit={handleAddWorkoutSubmit}>
               <input 
               type="text" 
-              name="workoutName"
+              name="workoutname"
               required="required"
               placeholder="Enter workout"
               onChange={handleAddWorkoutChange}

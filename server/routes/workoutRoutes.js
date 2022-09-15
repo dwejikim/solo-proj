@@ -6,9 +6,9 @@ router.get('/', workoutController.getWorkout, (req, res) => {
     res.status(200).json(res.locals.getWorkout);
 })
 
-// router.post('/', workoutController.createWorkout, (req, res) => {
-//     res.status(200).json(res.locals.newWorkout);
-// })
+router.post('/', workoutController.createWorkout, (req, res) => {
+    res.status(200).json(res.locals.madeNewWorkout);
+})
 
 // router.delete('.', workoutController.deleteWorkout, (req, res) => {
 

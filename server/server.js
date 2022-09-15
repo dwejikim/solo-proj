@@ -3,7 +3,9 @@ const app = express();
 const path = require('path');
 const workouts = require('./routes/workoutRoutes.js');
 const PORT = 3000;
+const cors = require('cors');
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded( {extended: true} ));
 app.use('/', workouts);
