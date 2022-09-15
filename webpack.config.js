@@ -11,6 +11,11 @@ module.exports = {
         filename: 'bundle.js'
     },
 
+    devServer: {
+        host: 'localhost',
+        port: 8080,
+    },
+    
     plugins: [
         new HTMLWebpackPlugin({
             template: './src/index.html'
@@ -20,7 +25,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /.js$/,
+                test: /.js|jsx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',

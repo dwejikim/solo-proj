@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const workouts = require('./routers/workout.js');
+const workouts = require('./routes/workoutRoutes.js');
 const PORT = 3000;
 
-
+app.use(express.json());
+app.use(express.urlencoded( {extended: true} ));
+app.use('/', workouts);
 
 
 //catch all route handler for errors;

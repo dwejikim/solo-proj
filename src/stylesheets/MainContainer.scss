@@ -1,0 +1,61 @@
+.new-workout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    border: 3px solid #ffffff;
+    text-align: center;
+    padding: 4px;
+    font-size: 32px;
+  }
+  
+  th {
+    background-color: rgb(119, 169, 141);
+    font-size: 16px;
+    
+  }
+  
+  td {
+    background-color: rgb(161, 176, 169);
+    font-size: 12px;
+  }
+  
+  form {
+    display: flex;
+    gap: 5px;
+  }
+  
+  form td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  form * {
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .button {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    justify-content: space-between;
+  }
+
+  input {
+    display: flex;
+    flex-direction: column;
+  }
+
+//   .addWorkout {
+//     display: flex;
+//   }

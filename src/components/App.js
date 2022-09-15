@@ -1,28 +1,18 @@
 import React, { Component } from 'react';
+import "../stylesheets/MainContainer.scss";
+import MainContainer from "./CreateWorkout.jsx"
+import WorkoutHistory from "./WorkoutHistory.jsx"
+
 
 class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Workout Log</h1>
-            <div style={styles.container}>
-                <h2>New Workout:</h2>
-            </div>
-            <div>
-            <h4>Date:</h4>
-            </div>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <h1>Workout Log</h1>
+        <MainContainer/>
+      </div>
+    )
+  }
 }
-
-const styles = {
-    container: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'left',
-      margin: 0,
-    },
-  };
 
 export default App;
